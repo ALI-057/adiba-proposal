@@ -1,9 +1,9 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Adiba 🤍</title>
+<title>Adiba Bibi 🤍</title>
 <style>
 body {
   margin:0;
@@ -20,24 +20,12 @@ body {
   position:fixed;
   width:100%;
   height:100%;
-  background:url('https://i.imgur.com/9QZ7Z6F.png');
+  background:url('https://i.imgur.com/9QZ7Z6F.png') repeat;
   background-size:cover;
   animation:moveStars 50s linear infinite;
   z-index:0;
 }
 @keyframes moveStars{from{background-position:0 0;} to{background-position:1000px 1000px;}}
-
-/* MOON */
-.moon{
-  position:absolute;
-  top:5%;
-  right:5%;
-  width:60px;
-  height:60px;
-  background:#fff;
-  border-radius:50%;
-  box-shadow:0 0 30px white;
-}
 
 /* LOCK SCREEN */
 #lock{
@@ -70,9 +58,9 @@ body {
 .heart{
   position:relative;
   width:50vw;
-  height:45vw;
+  height:50vw;
   max-width:250px;
-  max-height:225px;
+  max-height:250px;
   margin:60px auto;
   transform:rotate(-45deg);
 }
@@ -81,8 +69,8 @@ body {
   height:100%;
   object-fit:cover;
   transform:rotate(45deg);
-  border-radius:20px;
-  box-shadow:0 0 40px pink;
+  border-radius:30px;
+  box-shadow:0 0 50px pink;
 }
 
 /* SMALL HEARTS */
@@ -109,11 +97,12 @@ body {
   margin:auto;
   font-size:16px;
   line-height:1.5;
+  white-space:pre-line;
 }
 
 /* BUTTONS */
 button{
-  padding:10px 20px;
+  padding:12px 25px;
   margin:10px;
   border-radius:12px;
   border:none;
@@ -126,14 +115,14 @@ button{
 /* EMOJI */
 #emoji{
   position:absolute;
-  font-size:30px;
+  font-size:35px;
   display:none;
 }
 
 /* RING */
 #ring{
   display:none;
-  font-size:60px;
+  font-size:70px;
   animation:pop 1s ease forwards;
 }
 @keyframes pop{from{transform:scale(0);} to{transform:scale(1.5);}}
@@ -142,7 +131,6 @@ button{
 <body>
 
 <div class="stars"></div>
-<div class="moon"></div>
 
 <!-- LOCK SCREEN -->
 <div id="lock">
@@ -187,7 +175,7 @@ function unlock(){
     document.getElementById("lock").style.display="none";
     document.getElementById("main").style.display="block";
     typeWriter();
-    document.getElementById("bgMusic").muted=false; // unmute music on unlock
+    document.getElementById("bgMusic").muted=false;
   }else{
     alert("Wrong password 😜");
   }
@@ -209,8 +197,8 @@ setInterval(()=>{
   let h=document.createElement("div");
   h.className="small";
   let imgs=[
-"https://res.cloudinary.com/dvtveaclf/image/upload/f_auto,q_auto/7291_ylyuz3",
-"https://res.cloudinary.com/dvtveaclf/image/upload/v1775071321/IMG_20231223_161938_ubrfw4.jpg"
+"https://res.cloudinary.com/dvtveaclf/image/upload/f_auto,q_auto/7291_ylyuz3", // her
+"https://res.cloudinary.com/dvtveaclf/image/upload/v1775071321/IMG_20231223_161938_ubrfw4.jpg" // yours
   ];
   let img=document.createElement("img");
   img.src=imgs[Math.floor(Math.random()*2)];
@@ -241,7 +229,7 @@ function yesClick(){
   setTimeout(()=>{
     document.body.innerHTML=`
       <h1 style="margin-top:20%;">Alhamdulillah 🤍</h1>
-      <p>May Allah bless this beginning...</p>
+      <p>May Allah bless this beautiful beginning...</p>
       <h2>Mohammed Sadeq Ali 💖</h2>
     `;
   },2000);
